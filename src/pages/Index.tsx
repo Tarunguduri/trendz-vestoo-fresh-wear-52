@@ -4,12 +4,14 @@ import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/button';
 import CartIcon from '../components/CartIcon';
 import Footer from '../components/Footer';
+import FloatingClothes from '../components/FloatingClothes';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background flex flex-col">
+    <div className="min-h-screen bg-background flex flex-col relative overflow-hidden">
+      <FloatingClothes />
       <CartIcon />
-      <div className="flex-1 flex flex-col items-center justify-center px-4">
+      <div className="flex-1 flex flex-col items-center justify-center px-4 relative z-10">
         <div className="text-center animate-fade-in">
           <h1 className="text-6xl md:text-8xl font-light tracking-wider mb-4 text-white">
             TRENDZ

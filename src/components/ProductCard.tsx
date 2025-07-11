@@ -19,7 +19,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
 
   return (
     <Link to={`/product/${product.id}`} className="block">
-      <div className="bg-card border border-border rounded-lg overflow-hidden group hover:border-white/20 smooth-transition animate-fade-in cursor-pointer">
+      <div className="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:shadow-lg smooth-transition animate-fade-in cursor-pointer">
         <div className="aspect-square overflow-hidden">
           <img
             src={product.image}
@@ -28,13 +28,13 @@ const ProductCard = ({ product }: ProductCardProps) => {
           />
         </div>
         <div className="p-6">
-          <h3 className="text-lg font-medium mb-2 text-foreground">{product.name}</h3>
+          <h3 className="text-lg font-medium mb-2 text-gray-900">{product.name}</h3>
           <div className="space-y-1">
             <div className="flex items-center space-x-2">
-              <span className="text-2xl font-light text-white">₹{product.price}/-</span>
-              <span className="text-sm text-muted-foreground line-through">₹{originalPrice}</span>
+              <span className="text-2xl font-light text-gray-900">₹{product.price}/-</span>
+              <span className="text-sm text-gray-500 line-through">₹{originalPrice}</span>
             </div>
-            <span className="text-green-400 text-sm font-medium">({discount}% OFF)</span>
+            <span className="text-green-600 text-sm font-medium">({discount}% OFF)</span>
           </div>
         </div>
       </div>

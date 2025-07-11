@@ -48,21 +48,21 @@ const products = [
 
 const Catalog = () => {
   return (
-    <div className="min-h-screen bg-white flex flex-col py-8 px-4">
+    <div className="min-h-screen bg-background flex flex-col py-8 px-4">
       <CartIcon />
       <div className="max-w-7xl mx-auto flex-1 flex flex-col">
         <div className="flex items-center mb-8">
           <Link to="/">
-            <Button variant="outline" size="sm" className="mr-4 border-gray-300 hover:border-gray-600 hover:bg-gray-100 text-gray-900">
+            <Button variant="outline" size="sm" className="mr-4 border-white/20 hover:border-white hover:bg-white hover:text-black">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back
             </Button>
           </Link>
           <div>
-            <h1 className="text-4xl md:text-5xl font-light tracking-wider text-gray-900">
+            <h1 className="text-4xl md:text-5xl font-light tracking-wider text-white">
               CATALOG
             </h1>
-            <p className="text-gray-600 mt-2 font-light">
+            <p className="text-muted-foreground mt-2 font-light">
               Discover our latest collection
             </p>
           </div>
