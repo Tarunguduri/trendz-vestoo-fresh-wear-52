@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Plus, Minus, Trash2 } from 'lucide-react';
@@ -7,6 +6,7 @@ import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Label } from '../components/ui/label';
 import Footer from '../components/Footer';
+import FloatingClothes from '../components/FloatingClothes';
 
 const Cart = () => {
   const { cartItems, updateQuantity, removeFromCart, getTotalPrice } = useCart();
@@ -56,8 +56,9 @@ Powered by ReView`;
 
   if (cartItems.length === 0) {
     return (
-      <div className="min-h-screen bg-background flex flex-col py-8 px-4">
-        <div className="max-w-4xl mx-auto flex-1 flex flex-col">
+      <div className="min-h-screen bg-background flex flex-col py-8 px-4 relative overflow-hidden">
+        <FloatingClothes />
+        <div className="max-w-4xl mx-auto flex-1 flex flex-col relative z-10">
           <div className="flex items-center mb-8">
             <Link to="/catalog">
               <Button variant="outline" size="sm" className="mr-4 border-white/20 hover:border-white hover:bg-white hover:text-black">
@@ -88,8 +89,9 @@ Powered by ReView`;
   }
 
   return (
-    <div className="min-h-screen bg-background flex flex-col py-8 px-4">
-      <div className="max-w-4xl mx-auto flex-1 flex flex-col">
+    <div className="min-h-screen bg-background flex flex-col py-8 px-4 relative overflow-hidden">
+      <FloatingClothes />
+      <div className="max-w-4xl mx-auto flex-1 flex flex-col relative z-10">
         <div className="flex items-center mb-8">
           <Link to="/catalog">
             <Button variant="outline" size="sm" className="mr-4 border-white/20 hover:border-white hover:bg-white hover:text-black">

@@ -1,10 +1,10 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import ProductCard from '../components/ProductCard';
 import CartIcon from '../components/CartIcon';
 import Footer from '../components/Footer';
+import FloatingClothes from '../components/FloatingClothes';
 import { Button } from '../components/ui/button';
 
 const products = [
@@ -48,9 +48,10 @@ const products = [
 
 const Catalog = () => {
   return (
-    <div className="min-h-screen bg-background flex flex-col py-8 px-4">
+    <div className="min-h-screen bg-background flex flex-col py-8 px-4 relative overflow-hidden">
+      <FloatingClothes />
       <CartIcon />
-      <div className="max-w-7xl mx-auto flex-1 flex flex-col">
+      <div className="max-w-7xl mx-auto flex-1 flex flex-col relative z-10">
         <div className="flex items-center mb-8">
           <Link to="/">
             <Button variant="outline" size="sm" className="mr-4 border-white/20 hover:border-white hover:bg-white hover:text-black">

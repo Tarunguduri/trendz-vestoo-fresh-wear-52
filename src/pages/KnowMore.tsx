@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Star } from 'lucide-react';
@@ -6,6 +5,7 @@ import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import CartIcon from '../components/CartIcon';
 import Footer from '../components/Footer';
+import FloatingClothes from '../components/FloatingClothes';
 
 const reviews = [
   {
@@ -36,9 +36,10 @@ const reviews = [
 
 const KnowMore = () => {
   return (
-    <>
+    <div className="relative overflow-hidden">
+      <FloatingClothes />
       <CartIcon />
-      <div className="min-h-screen bg-background py-8 px-4">
+      <div className="min-h-screen bg-background py-8 px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center mb-8">
             <Link to="/">
@@ -134,7 +135,7 @@ const KnowMore = () => {
           <Footer />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
